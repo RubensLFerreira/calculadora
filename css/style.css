@@ -24,7 +24,7 @@ body {
 
 #calc h3 {
   font-size: .8em;
-  font-weight: 300;
+  font-weight: 500;
   color: #666;
 }
 
@@ -61,6 +61,7 @@ body {
   font-size: 1.2em;
   background-color: #dbdbdb;
   cursor: pointer;
+  font-weight: bold;
 }
 
 #buttons-container .number {
