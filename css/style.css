@@ -2,11 +2,11 @@
   margin: 0;
   padding: o;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lora', serif;
 }
 
 body {
-  background-image: url(https://projetta.arq.br/wp-content/uploads/2018/11/1-quadro-negro.jpg);
+  background: url("../bg.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,16 +16,17 @@ body {
 #calc {
   width: 400px;
   padding: .5em;
-  background-color: #adadad;
+  background-color: #4141418f;
   color: #000;
   display: flex;
   flex-direction: column;
+  border-radius: 8px;
 }
 
 #calc h3 {
-  font-size: .8em;
+  font-size: .9em;
   font-weight: 500;
-  color: #666;
+  color: rgb(226, 226, 226);
 }
 
 #operations {
@@ -37,15 +38,18 @@ body {
   min-height: 1.6em; /* tamanho minimo para nn aumentar quando digitar */
   padding: .2em;
   overflow-wrap: break-word; /* para quebrar os números quando forem muito grande */
+  font-family: 'Lora', serif;
+  color: rgb(228, 228, 228);
 }
 
 #previous_operation {
-  color: #777;
+  color: rgb(228, 228, 228);
 }
 
 #current-operation {
   font-size: 3em;
-  font-weight: 700;
+  font-weight: 400;
+  color: rgb(228, 228, 228);
 }
 
 #buttons-container {
@@ -61,7 +65,22 @@ body {
   font-size: 1.2em;
   background-color: #dbdbdb;
   cursor: pointer;
-  font-weight: bold;
+}
+
+#buttons-container .number-red {
+  background-color: rgb(255, 138, 138);
+}
+
+#buttons-container .number-red:hover {
+  background-color: rgb(250, 110, 110);
+}
+
+#buttons-container .number-orange {
+  background-color: #fca93d;
+}
+
+#buttons-container .number-orange:hover {
+  background-color: #fc9c20;
 }
 
 #buttons-container .number {
