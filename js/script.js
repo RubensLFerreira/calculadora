@@ -27,13 +27,37 @@ class calculator {
   processOperation(operation) {
     // get current and previous value
     let operationValue;
-    let previous = +this.previousOperationText.innerText; // pegando previousOperationText transformando pra number e armazenando
-    let current = +this.currentOperationText.innerText;
+    const previous = +this.previousOperationText.innerText; // pegando previousOperationText transformando pra number e armazenando
+    const current = +this.currentOperationText.innerText;
+
+    switch (operation) {
+      case "+":
+        operationValue = previous + current;
+        this.updateScreen(operationValue, operation, current, previous);
+        break;
+      default:
+        return;
+    }
   }
 
   // change values of the calculator screen
-  updateScreen() {
-    this.currentOperationText.innerText += this.currentOperation;
+  updateScreen( 
+    operationValue = null,
+    operation = null,
+    current = null,
+    previous = null //deixando todos os valores vázios
+  ) {
+    if(operationValue === null) {
+      this.currentOperationText.innerText += this.currentOperation;
+    } else {
+      // check if value is zero, if it is just add current value
+      if(previous === 0) {
+        operationValue = current;
+      }
+      // add current value of previous
+      this.previousOperationText.innerText = `${operationValue} ${operation}`;
+      this.currentOperationText.innerText = '';
+    }
   }
 }
 
