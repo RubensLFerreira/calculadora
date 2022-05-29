@@ -125,7 +125,7 @@ class calculator {
   processEqualOperator() {
     const operation = previousOperationText.innerHTML.split(" ")[1];
     this.processOperation(operation);
-    // return currentOperationText.innerHTML = operation; 
+    // return currentOperationText.innerHTML = operationValue; 
   }
 }
 
